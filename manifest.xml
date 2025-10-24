@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+            xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+            xsi:type="MailApp">
+
+  <Id>5bcb021e-8b91-4a5e-b673-09d23ccf1234</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Tim Harrison Solutions</ProviderName>
+  <DefaultLocale>en-GB</DefaultLocale>
+  <DisplayName DefaultValue="Purview Encrypt Button" />
+  <Description DefaultValue="Marks messages for Purview encryption via DLP." />
+  <IconUrl DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/icon32.png" />
+  <HighResolutionIconUrl DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/icon64.png" />
+  <SupportUrl DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/help" />
+
+  <Hosts>
+    <Host Name="Mailbox" />
+  </Hosts>
+
+  <Requirements>
+    <Sets DefaultMinVersion="1.12">
+      <Set Name="Mailbox" />
+    </Sets>
+  </Requirements>
+
+  <Permissions>ReadWriteMailbox</Permissions>
+
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" />
+  </Rule>
+
+  <DisableEntityHighlighting>false</DisableEntityHighlighting>
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+                    xsi:type="VersionOverridesV1_0">
+
+    <Requirements>
+      <bt:Sets DefaultMinVersion="1.12">
+        <bt:Set Name="Mailbox" />
+      </bt:Sets>
+    </Requirements>
+
+    <Hosts>
+      <Host xsi:type="Mailbox">
+        <DesktopFormFactor>
+
+          <!-- Button on ribbon -->
+          <ExtensionPoint xsi:type="MessageComposeCommandSurface">
+            <OfficeCommand>
+              <Control xsi:type="Button" id="markForEncryption">
+                <Label resid="labelMarkForEncryption" />
+                <Supertip>
+                  <Title resid="labelMarkForEncryption" />
+                  <Description resid="descMarkForEncryption" />
+                </Supertip>
+                <Icon>
+                  <bt:Image size="16" resid="icon16" />
+                  <bt:Image size="32" resid="icon32" />
+                </Icon>
+                <Action xsi:type="ExecuteFunction">
+                  <FunctionName>markForEncryption</FunctionName>
+                </Action>
+              </Control>
+            </OfficeCommand>
+          </ExtensionPoint>
+
+          <!-- Required for Outlook validation -->
+          <SourceLocation resid="functionFile" />
+
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon16" DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/icon16.png" />
+        <bt:Image id="icon32" DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/icon32.png" />
+      </bt:Images>
+
+      <bt:Urls>
+        <bt:Url id="functionFile" DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/taskpane.html" />
+      </bt:Urls>
+
+      <bt:ShortStrings>
+        <bt:String id="labelMarkForEncryption" DefaultValue="Mark for Encryption" />
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="descMarkForEncryption" DefaultValue="Tag this message for Purview encryption" />
+      </bt:LongStrings>
+    </Resources>
+
+    <FunctionFile resid="functionFile" />
+  </VersionOverrides>
+</OfficeApp>
