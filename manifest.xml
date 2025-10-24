@@ -42,6 +42,16 @@
       </bt:Sets>
     </Requirements>
 
+		  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/taskpane.html"/>
+        <RequestedHeight>250</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+		
+  </FormSettings>
+
     <Hosts>
       <Host xsi:type="Mailbox">
         <DesktopFormFactor>
@@ -66,9 +76,6 @@
             </OfficeCommand>
           </ExtensionPoint>
 
-          <!-- Required for Outlook validation -->
-          <SourceLocation resid="functionFile" />
-
         </DesktopFormFactor>
       </Host>
     </Hosts>
@@ -81,6 +88,7 @@
 
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/taskpane.html" />
+				<bt:Url id="functionFile" DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/functions.js"/>
       </bt:Urls>
 
       <bt:ShortStrings>
