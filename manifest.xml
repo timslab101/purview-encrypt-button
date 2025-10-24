@@ -13,8 +13,8 @@
   <IconUrl DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/icon/icon32.png" />
   <HighResolutionIconUrl DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/icon/icon64.png" />
   <SupportUrl DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/help" />
-  <Hosts>
-    <Host Name="Mailbox" />
+  	<Hosts>
+		<Host Name="Mailbox" />
   </Hosts>
   <Requirements>
     <Sets DefaultMinVersion="1.12">
@@ -26,8 +26,7 @@
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" />
   </Rule>
   <DisableEntityHighlighting>false</DisableEntityHighlighting>
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
-                    xsi:type="VersionOverridesV1_0">
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="VersionOverridesV1_0">
     <Requirements>
       <bt:Sets DefaultMinVersion="1.12">
         <bt:Set Name="Mailbox" />
@@ -44,7 +43,6 @@
     <Hosts>
       <Host xsi:type="Mailbox">
         <DesktopFormFactor>
-          <!-- Button on ribbon -->
           <ExtensionPoint xsi:type="MessageComposeCommandSurface">
             <OfficeCommand>
               <Control xsi:type="Button" id="markForEncryption">
