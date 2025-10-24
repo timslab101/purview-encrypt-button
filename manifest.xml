@@ -4,7 +4,6 @@
             xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
             xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
             xsi:type="MailApp">
-
   <Id>5bcb021e-8b91-4a5e-b673-09d23ccf1234</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Tim Harrison Solutions</ProviderName>
@@ -14,34 +13,26 @@
   <IconUrl DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/icon/icon32.png" />
   <HighResolutionIconUrl DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/icon/icon64.png" />
   <SupportUrl DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/help" />
-
   <Hosts>
     <Host Name="Mailbox" />
   </Hosts>
-
   <Requirements>
     <Sets DefaultMinVersion="1.12">
       <Set Name="Mailbox" />
     </Sets>
   </Requirements>
-
   <Permissions>ReadWriteMailbox</Permissions>
-
   <Rule xsi:type="RuleCollection" Mode="Or">
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" />
   </Rule>
-
   <DisableEntityHighlighting>false</DisableEntityHighlighting>
-
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
                     xsi:type="VersionOverridesV1_0">
-
     <Requirements>
       <bt:Sets DefaultMinVersion="1.12">
         <bt:Set Name="Mailbox" />
       </bt:Sets>
     </Requirements>
-
 		  <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
@@ -49,13 +40,10 @@
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
-		
   </FormSettings>
-
     <Hosts>
       <Host xsi:type="Mailbox">
         <DesktopFormFactor>
-
           <!-- Button on ribbon -->
           <ExtensionPoint xsi:type="MessageComposeCommandSurface">
             <OfficeCommand>
@@ -75,22 +63,18 @@
               </Control>
             </OfficeCommand>
           </ExtensionPoint>
-
         </DesktopFormFactor>
       </Host>
     </Hosts>
-
     <Resources>
       <bt:Images>
         <bt:Image id="icon16" DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/icon/icon16.png" />
         <bt:Image id="icon32" DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/icon/icon32.png" />
       </bt:Images>
-
       <bt:Urls>
-        <bt:Url id="functionFile" DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/taskpane.html" />
-				<bt:Url id="functionFile" DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/functions.js"/>
+        <bt:Url id="SourceFile" DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/taskpane.html" />
+		<bt:Url id="functionFile" DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/functions.js"/>
       </bt:Urls>
-
       <bt:ShortStrings>
         <bt:String id="labelMarkForEncryption" DefaultValue="Mark for Encryption" />
       </bt:ShortStrings>
@@ -98,8 +82,6 @@
         <bt:String id="descMarkForEncryption" DefaultValue="Tag this message for Purview encryption" />
       </bt:LongStrings>
     </Resources>
-
     <FunctionFile resid="functionFile" />
   </VersionOverrides>
 </OfficeApp>
-
