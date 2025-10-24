@@ -11,9 +11,9 @@
   <DefaultLocale>en-GB</DefaultLocale>
   <DisplayName DefaultValue="Purview Encrypt Button" />
   <Description DefaultValue="Marks messages for Purview encryption via DLP." />
-  <IconUrl DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/icon32.png" />
-  <HighResolutionIconUrl DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/icon64.png" />
-  <SupportUrl DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/help" />
+  <IconUrl DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/icon/icon32.png" />
+  <HighResolutionIconUrl DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/icon/icon64.png" />
+  <SupportUrl DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/help" />
 
   <Hosts>
     <Host Name="Mailbox" />
@@ -45,7 +45,7 @@
 		  <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/taskpane.html"/>
+        <SourceLocation DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/taskpane.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -82,13 +82,13 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/icon16.png" />
-        <bt:Image id="icon32" DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/icon32.png" />
+        <bt:Image id="icon16" DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/icon/icon16.png" />
+        <bt:Image id="icon32" DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/icon/icon32.png" />
       </bt:Images>
 
       <bt:Urls>
-        <bt:Url id="functionFile" DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/taskpane.html" />
-				<bt:Url id="functionFile" DefaultValue="https://purviewdevelopment.blob.core.windows.net/$web/functions.js"/>
+        <bt:Url id="functionFile" DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/taskpane.html" />
+				<bt:Url id="functionFile" DefaultValue="https://github.com/timslab101/purview-encrypt-button/blob/main/functions.js"/>
       </bt:Urls>
 
       <bt:ShortStrings>
@@ -102,3 +102,4 @@
     <FunctionFile resid="functionFile" />
   </VersionOverrides>
 </OfficeApp>
+
